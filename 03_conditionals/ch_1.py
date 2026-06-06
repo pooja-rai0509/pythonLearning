@@ -55,3 +55,57 @@ elif cup_size == "large":
     print("Price is 20 rs")
 else:
     print("Unknown cup size")
+
+
+# You're building a smart thermostat alert system:
+# If the device_status is "active"
+# and temperature > 35 -> warn: "High temperature alert!"
+# else: "Temperature is normal"
+# if device is off -> "Device is offline"
+
+device_status = "active"
+temperature = 25
+
+if device_status == "active":
+    if temperature > 35:
+        print(f"High temperature alert!")
+    else:
+        print(f"Temperature is normal!")
+else:
+    print(f"Device is offline")
+
+
+# You run an online tea store.
+# If the order amount is more than 300, delivery is free
+# otherwise, it costs 30
+# Task:
+# Input: order amount
+# Use ternary operator to decide delivery fee
+
+order_amount = int(input("Enter order amount : "))
+
+delivery_fees = 0 if order_amount > 300 else 30
+
+print(f"Delivery fees : {delivery_fees}")
+
+
+# You're buil;ding a ticket info system for a railway app.
+# Based on seat type, show its features.
+# Task:
+# Input: "sleeeper", "AC", "genereal", "luxury"
+# Match using match-case
+# Unknown -> show "Invalid seat type"
+
+seat_type = input("Enter seat type(sleeper/AC/general/luxury): ").lower()
+
+match seat_type:
+    case "sleeper":
+        print("Sleeper - no AC, beds available")
+    case "ac":
+        print("AC - Air Conditioned, comfy ride")
+    case "general":
+        print("General - Cheapest ioption, no reservation")
+    case "luxury":
+        print("Luxury - premium seats with meals")
+    case _:
+        print("Invalid seat type")
