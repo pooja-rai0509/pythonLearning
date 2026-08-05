@@ -12,7 +12,7 @@ class Masalachai(BaseChai):
 
 #composition class
 class chaiShop:
-    chai_cls = BaseChai
+    chai_cls = BaseChai #or chai_cls = BaseChai() both are same
 
     def __init__(self):
         self.chai = self.chai_cls("Regular")
